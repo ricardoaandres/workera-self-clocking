@@ -2,6 +2,9 @@
 
 Node.js script that signs into the Workera portal, opens the attendance modal, and confirms either an *entrada* (morning) or *salida* (afternoon) punch depending on the local execution time.
 
+## Requirements
+- Node.js
+
 ## Setup
 
 1. Install dependencies:
@@ -26,3 +29,9 @@ node workera_clocker.js
 ```
 
 The script launches Chromium in headed mode, navigates to `https://workera.com/portal/login`, confirms attendance, and closes the browser window. When run before noon it confirms *entrada*; otherwise it confirms *salida*. Update `resolveAction` if your schedule differs.
+
+For a easier usage, you can create an alias in your shell:
+
+```bash
+alias workera="node /path/to/workera_clocker.js"
+```
