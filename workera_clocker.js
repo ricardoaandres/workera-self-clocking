@@ -78,7 +78,7 @@ async function main() {
       password
     );
 
-    await page.click('button[data-v-3c382841]');
+    await page.click('text="Iniciar sesión"');
     await page.waitForLoadState("networkidle");
 
     await waitAndClick(page, 'text="Marcar asistencia"');
